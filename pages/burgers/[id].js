@@ -28,7 +28,7 @@ export default function BurgerPost({post}) {
         <div className={styles.Beef}>
           <ul>
             {post.ingredients.map((ingredient, key)=>(
-              <li id={key}>{ingredient}</li>
+              <li key={key}>{ingredient}</li>
             ))}
           </ul>
         </div>
