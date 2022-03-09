@@ -1,4 +1,3 @@
-import Header from '../components/global/Header/Header'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Button from '../components/global/Button/Button'
@@ -6,10 +5,9 @@ import Footer from '../components/global/Footer/Footer'
 import Heading from '../components/global/Heading/Heading'
 
 export default function Home() {
+
   return (
     <>
-      <Header />
-
       <main className={styles.main}>
         <Heading />
 

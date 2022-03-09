@@ -1,7 +1,6 @@
 import styles from './id.module.css'
 import Footer from '../../components/global/Footer/Footer'
 import Heading from '../../components/global/Heading/Heading'
-import Header from '../../components/global/Header/Header'
 import Button from '../../components/global/Button/Button'
 import Link from 'next/link'
 import Container from '../../components/global/Container/Container'
@@ -9,8 +8,6 @@ import Container from '../../components/global/Container/Container'
 export default function BurgerPost({post}) {
   return(
     <>
-      <Header />
-
       <Heading />
 
       <main>

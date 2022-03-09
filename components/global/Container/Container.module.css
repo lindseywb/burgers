@@ -4,6 +4,6 @@
         @apply max-w-screen-2xl;
     }
     &.Grid {
-        @apply grid grid-cols-4 gap-2;
+        @apply grid grid-cols-5 gap-4;
     }
 }

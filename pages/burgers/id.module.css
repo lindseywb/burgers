@@ -1,22 +1,22 @@
 .Burger {
-    @apply max-w-md my-5 mx-auto font-redex;
+    @apply max-w-md my-5 mx-auto font-fredoka;
     & .BunTop {
         @apply py-3 px-4 bg-twine-400 text-twine-900 rounded-lg rounded-b-none;
     }
     & .Lettuce {
-        @apply py-3 px-4 bg-apple-500 text-apple-100;
+        @apply py-3 px-4 bg-apple-500 text-apple-50;
     }
     & .Tomato {
-        @apply py-3 px-4 bg-red-600 text-red-100;
+        @apply py-3 px-4 bg-red-600 text-red-50;
     }
 
     & .Beef {
         & li {
-            @apply py-3 px-4 bg-twine-800 text-twine-200;
+            @apply py-3 px-4 bg-twine-800 text-twine-100;
         }
     }
     & .Cheese {
-        @apply py-3 px-4 bg-saffron-300;
+        @apply h-3 bg-saffron-300;
     }
     & .BunBottom {
         @apply py-3 px-4 bg-twine-400 text-twine-900 rounded-lg rounded-t-none;

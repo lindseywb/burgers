@@ -1,6 +1,10 @@
 .Burgers {
     @apply my-6;
     & .BurgerList {
-        @apply py-5 px-2 border border-red-500 text-center;
+        @apply border-4 rounded border-red-500 flex items-center justify-center;
+
+        & a {
+          @apply block py-5 px-3 text-center font-fredoka text-lg;
+        }
     }
 }

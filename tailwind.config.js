@@ -4,10 +4,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      'redex': ['"Readex Prot"', 'serif']
-    },
     extend: {
+      fontFamily: {
+        'fredoka': ['Fredoka', 'serif']
+      },
       colors: {
         'twine': {
           '50': '#fcfdf6',

@@ -1,4 +1,3 @@
-import Header from '../../components/global/Header/Header'
 import styles from './index.module.css'
 import Link from 'next/link'
 import Footer from '../../components/global/Footer/Footer'
@@ -8,7 +7,6 @@ import Container from '../../components/global/Container/Container'
 export default function Burgers({burgers}) {
   return (
     <>
-      <Header />
       <Heading />
       <main className={styles.main}>
         <div className={styles.Burgers}>
