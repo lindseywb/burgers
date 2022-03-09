@@ -3,43 +3,50 @@ import Footer from '../../components/global/Footer/Footer'
 import Heading from '../../components/global/Heading/Heading'
 import Header from '../../components/global/Header/Header'
 import Button from '../../components/global/Button/Button'
+import Link from 'next/link'
+import Container from '../../components/global/Container/Container'
 
 export default function BurgerPost({post}) {
-  console.log({post})
   return(
     <>
       <Header />
 
       <Heading />
 
-      <main className={styles.Burger}>
-        <div className={styles.Bun}>
-          {post.name}
-        </div>
-        <div className={styles.Lettuce}>
-          {post.restaurant}
-        </div>
-        <div className={styles.Tomato}>
-          {post.description}
-        </div>
-        <div className={styles.Cheese}>
+      <main>
+        <div className={styles.Burger}>
+          <div className={styles.BunTop}>
+            {post.name}
+          </div>
+          <div className={styles.Lettuce}>
+            {post.restaurant}
+          </div>
+          <div className={styles.Tomato}>
+            {post.description}
+          </div>
+          <div className={styles.Cheese}>
 
+          </div>
+          <div className={styles.Beef}>
+            <ul>
+              {post.ingredients.map((ingredient, key)=>(
+                <li key={key}>{ingredient}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.BunBottom}>
+            <Link href={post.web}>
+              <a>Website</a>
+            </Link>
+          </div>
         </div>
-        <div className={styles.Beef}>
-          <ul>
-            {post.ingredients.map((ingredient, key)=>(
-              <li key={key}>{ingredient}</li>
-            ))}
-          </ul>
-        </div>
-        <div className={styles.Bun}>
+        <Container>
+          <Button link="/burgers" text="All Burgers" />
+        </Container>
 
-        </div>
-
-        <Button />
       </main>
 
-      <Footer link={post.web} />
+      <Footer />
     </>
 
   )
@@ -75,12 +82,12 @@ export async function getStaticProps({ params }) {
 
   // Query blog post, based on `params.id`, generated from getStaticPaths()
   const res = await fetch(`https://burgers1.p.rapidapi.com/burgers/${params.id}`, {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "burgers1.p.rapidapi.com",
-		"x-rapidapi-key": "8b99bb93a9msh54e55120fda0426p1ef27bjsn890d33a12af5"
-	}
-})
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "burgers1.p.rapidapi.com",
+      "x-rapidapi-key": "8b99bb93a9msh54e55120fda0426p1ef27bjsn890d33a12af5"
+    }
+  })
 
   // Turn the response into JSON.
   const post = await res.json()
