@@ -1,5 +1,5 @@
 .Burger {
-    @apply max-w-md my-5 mx-auto font-fredoka;
+    @apply max-w-md mt-9 mb-5 mx-auto font-fredoka;
     & .BunTop {
         @apply py-3 px-4 bg-twine-400 text-twine-900 rounded-lg rounded-b-none;
     }
@@ -12,7 +12,7 @@
 
     & .Beef {
         & li {
-            @apply py-3 px-4 bg-twine-800 text-twine-100;
+            @apply py-2 px-4 bg-twine-800 text-twine-100;
         }
     }
     & .Cheese {

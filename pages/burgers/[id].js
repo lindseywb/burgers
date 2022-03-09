@@ -11,34 +11,37 @@ export default function BurgerPost({post}) {
       <Heading />
 
       <main>
-        <div className={styles.Burger}>
-          <div className={styles.BunTop}>
-            {post.name}
-          </div>
-          <div className={styles.Lettuce}>
-            {post.restaurant}
-          </div>
-          <div className={styles.Tomato}>
-            {post.description}
-          </div>
-          <div className={styles.Cheese}>
-
-          </div>
-          <div className={styles.Beef}>
-            <ul>
-              {post.ingredients.map((ingredient, key)=>(
-                <li key={key}>{ingredient}</li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.BunBottom}>
-            <Link href={post.web}>
-              <a>Website</a>
-            </Link>
-          </div>
-        </div>
         <Container>
-          <Button link="/burgers" text="All Burgers" />
+          <div className={styles.Burger}>
+            <div className={styles.BunTop}>
+              {post.name}
+            </div>
+            <div className={styles.Lettuce}>
+              {post.restaurant}
+            </div>
+            <div className={styles.Tomato}>
+              {post.description}
+            </div>
+            <div className={styles.Cheese}>
+
+            </div>
+            <div className={styles.Beef}>
+              <ul>
+                {post.ingredients.map((ingredient, key)=>(
+                  <li key={key}>{ingredient}</li>
+                ))}
+              </ul>
+            </div>
+            <div className={styles.BunBottom}>
+              <Link href={post.web}>
+                <a>Website</a>
+              </Link>
+            </div>
+          </div>
+        </Container>
+
+        <Container>
+          <Button link="/burgers" text="All Burgers" style="center" />
         </Container>
 
       </main>
