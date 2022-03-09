@@ -35,7 +35,7 @@ export async function getStaticProps() {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "burgers1.p.rapidapi.com",
-      "x-rapidapi-key": "8b99bb93a9msh54e55120fda0426p1ef27bjsn890d33a12af5"
+      "x-rapidapi-key": process.env.RAPIDAPIKEY
     }
   })
   const burgers = await res.json()

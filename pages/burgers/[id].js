@@ -54,14 +54,14 @@ export default function BurgerPost({post}) {
 
 // Get a list of all the blog posts...
 export async function getStaticPaths() {
-
+  console.log(process.env.RAPIDAPIKEY)
   const res = await fetch("https://burgers1.p.rapidapi.com/burgers", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "burgers1.p.rapidapi.com",
-		"x-rapidapi-key": "8b99bb93a9msh54e55120fda0426p1ef27bjsn890d33a12af5"
-	}
-})
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "burgers1.p.rapidapi.com",
+      "x-rapidapi-key": process.env.RAPIDAPIKEY
+    }
+  })
   const posts = await res.json()
 
   // Get the paths we want to pre-render based on posts.
@@ -85,7 +85,7 @@ export async function getStaticProps({ params }) {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "burgers1.p.rapidapi.com",
-      "x-rapidapi-key": "8b99bb93a9msh54e55120fda0426p1ef27bjsn890d33a12af5"
+      "x-rapidapi-key": process.env.RAPIDAPIKEY
     }
   })
 
